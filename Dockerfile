@@ -1,4 +1,4 @@
-FROM ubuntu:22.04
+FROM ubuntu:20.04
 RUN apt-get update
 RUN apt-get install curl gnupg git --yes
 RUN curl https://baltocdn.com/helm/signing.asc | apt-key add -
