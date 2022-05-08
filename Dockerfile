@@ -9,3 +9,6 @@ RUN echo "deb [signed-by=/usr/share/keyrings/kubernetes-archive-keyring.gpg] htt
 RUN apt-get update
 RUN apt-get install -y helm kubectl
 RUN helm plugin install https://github.com/chartmuseum/helm-push
+COPY helm-plugin-config-creator/plugin.yaml helm-plugin-config-creator/
+COPY helm-plugin-config-creator/cheetah* helm-plugin-config-creator/
+RUN cd helm-plugin-config-creator && helm plugin install .
