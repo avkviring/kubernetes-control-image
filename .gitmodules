@@ -1,0 +1,3 @@
+[submodule "helm-plugin-config-creator"]
+	path = helm-plugin-config-creator
+	url = ../../tools/helm-plugin-config-creator.git
