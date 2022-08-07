@@ -1,3 +1,3 @@
 [submodule "helm-plugin-config-creator"]
 	path = helm-plugin-config-creator
-	url = ../../tools/helm-plugin-config-creator.git
+	url = git@github.com:cheetah-game-platform/helm-plugin-config-creator.git
