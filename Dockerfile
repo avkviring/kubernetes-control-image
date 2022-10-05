@@ -8,7 +8,9 @@ RUN echo "deb https://baltocdn.com/helm/stable/debian/ all main" | tee /etc/apt/
 RUN echo "deb [signed-by=/usr/share/keyrings/kubernetes-archive-keyring.gpg] https://apt.kubernetes.io/ kubernetes-xenial main" | tee /etc/apt/sources.list.d/kubernetes.list
 RUN apt-get update
 RUN apt-get install -y helm kubectl
+ENV HELM_PLUGINS /var/helm-plugins/
 RUN helm plugin install https://github.com/chartmuseum/helm-push
+RUN mkdir -p /var/helm-plugins/
 COPY helm-plugin-config-creator/plugin.yaml helm-plugin-config-creator/
 COPY helm-plugin-config-creator/cheetah* helm-plugin-config-creator/
 RUN cd helm-plugin-config-creator && helm plugin install .
