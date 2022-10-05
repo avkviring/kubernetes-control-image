@@ -15,4 +15,4 @@ COPY helm-plugin-config-creator/plugin.yaml helm-plugin-config-creator/
 COPY helm-plugin-config-creator/cheetah* helm-plugin-config-creator/
 RUN cd helm-plugin-config-creator && helm plugin install .
 RUN apt-get install wget -y
-RUN wget -c https://github.com/helmwave/helmwave/releases/download/v0.20.3/helmwave_0.20.3_linux_amd64.tar.gz -O - | tar -xz && mv helmwave /usr/local/bin/
+RUN wget -c https://github.com/helmwave/helmwave/releases/download/v0.21.1/helmwave_0.21.1_linux_amd64.tar.gz -O - | tar -xz && mv helmwave /usr/local/bin/
