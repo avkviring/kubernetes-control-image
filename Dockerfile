@@ -15,3 +15,4 @@ RUN mkdir -p /var/helm-plugins/
 RUN apt-get install wget -y
 RUN wget -c https://github.com/helmwave/helmwave/releases/download/v0.21.1/helmwave_0.21.1_linux_amd64.tar.gz -O - | tar -xz && mv helmwave /usr/local/bin/
 RUN apt-get install git-crypt -y
+RUN apt-get install git-lfs -y
