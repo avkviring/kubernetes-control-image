@@ -17,3 +17,4 @@ RUN wget -c https://github.com/helmwave/helmwave/releases/download/v0.36.4/helmw
 RUN apt-get install git-crypt -y
 RUN apt-get install git-lfs -y
 RUN apt-get install -y gnupg
+RUN apt-get install -y jq 
