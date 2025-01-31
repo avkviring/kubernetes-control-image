@@ -18,3 +18,4 @@ RUN apt-get install git-crypt -y
 RUN apt-get install git-lfs -y
 RUN apt-get install -y gnupg
 RUN apt-get install -y jq 
+RUN apt-get install -y netcat
