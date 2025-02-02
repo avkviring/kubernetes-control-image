@@ -19,5 +19,6 @@ RUN apt-get install git-lfs -y
 RUN apt-get install -y gnupg
 RUN apt-get install -y jq 
 RUN apt-get install -y netcat
-RUN apt-get install -y snapd
+RUN apt-get install -y snapd squashfuse fuse
+RUN systemctl enable snapd
 RUN snap install doctl
