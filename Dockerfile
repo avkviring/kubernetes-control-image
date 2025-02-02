@@ -20,4 +20,6 @@ RUN apt-get install -y gnupg
 RUN apt-get install -y jq 
 RUN apt-get install -y netcat
 RUN apt-get install -y curl
-RUN curl -sL https://git.io/docker-machine-driver-doctl | sh && mv ./doctl /usr/local/bin
+RUN wget https://github.com/digitalocean/doctl/releases/download/v1.120.1/doctl-1.120.1-linux-amd64.tar.gz
+RUN tar xf ~/doctl-1.120.1-linux-amd64.tar.gz
+RUN mv /doctl /usr/local/bin
