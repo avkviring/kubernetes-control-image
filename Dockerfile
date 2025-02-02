@@ -20,4 +20,4 @@ RUN apt-get install -y gnupg
 RUN apt-get install -y jq 
 RUN apt-get install -y netcat
 RUN apt-get install -y snapd
-RUN snap install -y doctl
+RUN snap install doctl
