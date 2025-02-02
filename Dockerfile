@@ -19,6 +19,4 @@ RUN apt-get install git-lfs -y
 RUN apt-get install -y gnupg
 RUN apt-get install -y jq 
 RUN apt-get install -y netcat
-RUN apt-get install -y snapd squashfuse fuse
-RUN systemctl enable snapd
-RUN snap install doctl
+RUN curl -sL https://git.io/docker-machine-driver-doctl | sh && mv ./doctl /usr/local/bin
